@@ -26,17 +26,14 @@ export default async function RootLayout({
 }>) {
 
   const session = await getSession()
-  // console.log('session :', {session})
+
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-slate-600`}
       >
         <Providers session={session}>
-
-        
-        {children}
-
+          {children}
         </Providers>
       </body>
     </html>
